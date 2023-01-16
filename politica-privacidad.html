@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <title>Mayra Handmade Designs</title>
+    <link rel="icon" type="image/png" href="favicon/img/favicon.png" />
+    <link rel="apple-touch-icon" href="touch-icon-iphone.png" />
+    <link
+      rel="apple-touch-icon"
+      sizes="152x152"
+      href="/static/img/apple-touch-icon/touch-icon-ipad.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/static/img/apple-touch-icon/touch-icon-iphone-retina.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="167x167"
+      href="/static/img/apple-touch-icon/touch-icon-ipad-retina.png"
+    />
+    <meta name="theme-color" content="#3c790a" />
+    <meta
+      name="theme-color"
+      content="#ecd96f"
+      media="(prefers-color-scheme: light)"
+    />
+    <meta
+      name="theme-color"
+      content="#0b3e05"
+      media="(prefers-color-scheme: dark)"
+    />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no"
+    />
+    <meta name="author" content="Tu nombre" />
+    <meta name="generator" content="Clojure" />
+    <meta name="keywords" content="html, css, javascript" />
+    <meta name="description" content="my description..." />
+    <meta property="og:image" content="img/screenshot.png" />
+    <meta property="og:title" content="The Rock" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@cuenta" />
+    <meta name="twitter:creator" content="@cuenta" />
+    <meta property="og:image:secure_url" content="https://..." />
+    <meta property="og:image:type" content="image/jpeg" />
+    <meta property="og:image:width" content="400" />
+    <meta property="og:image:height" content="300" />
+    <meta property="og:image:alt" content="" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+    />
+    <link rel="stylesheet" type="text/css" href="css/main.css" />
+    <!-- CSS -->
+    <link
+      href="css/mobile.css"
+      rel="stylesheet"
+      media="all and (max-width: 600px)"
+    />
+    <link
+      href="css/desktop.css"
+      rel="stylesheet"
+      media="all and (min-width: 601px)"
+    />
+    <!-- FIN CSS -->
+    <!--JavaScript-->
+    <script src="https://unpkg.com/alpinejs" defer></script>
+  </head>
+  <body>
+    <header
+      class="header"
+      x-data="{ open: false, isTopScroll: true }"
+      @scroll.window="isTopScroll = window.pageYOffset === 0"
+      :class="isTopScroll ? '' : 'header--background'"
+    >
+      <div class="container">
+        <button class="button header__open" @click="open = true">
+          <img src="img/1-icons/iconos-header/menu.png" alt="Abrir menu" />
+        </button>
+        <a class="header__logo" href="home.html">
+          <img
+            src="img/2-logo/logo-preview.png"
+            alt="Logo"
+            class="header__image header__logo"
+          />
+        </a>
+        <a
+          class="button header__carrito"
+          href="https://www.etsy.com/es/?ref=lgo"
+        >
+          <img
+            src="img/1-icons/iconos-header/carrito.png"
+            alt="Carrito de compra"
+          />
+        </a>
+        <nav class="nav" :class="open ? 'nav--show' : ''">
+          <div class="nav__container-button">
+            <button class="button header__close" @click="open = false">
+              <img
+                src="img/1-icons/iconos-header/close.png"
+                alt="Cerrar menu"
+              />
+            </button>
+          </div>
+          <div class="nav__container-links">
+            <ul class="nav__ul">
+              <li class="nav__item">
+                <a href="index.html" class="nav__link">¡Hola!</a>
+              </li>
+              <li class="nav__item">
+                <a href="vamonos-de-compras.html" class="nav__link"
+                  >¡Vamonos de compras!</a
+                >
+              </li>
+              <li class="nav__item">
+                <a href="lo-que-te-ofrecemos.html" class="nav__link"
+                  >Lo que te ofrecemos</a
+                >
+              </li>
+              <li class="nav__item">
+                <a href="contacto.html" class="nav__link">Contacto</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <main>
+      <section class="section-avisos">
+        <h1 class="section-avisos__titulo">POLÍTICA DE PRIVACIDAD</h1>
+        <p class="section-avisos__texto">
+          [VUESTRA MARCA] ha adecuado esta web a las exigencias de la Ley
+          Orgánica 15/1999, de 13 de diciembre, de Protección de Datos de
+          Carácter Personal (LOPD), y al Real Decreto 1720/2007, de 21 de
+          diciembre, conocido como el Reglamento de desarrollo de la LOPD.
+          Cumple también con el Reglamento (UE) 2016/679 del Parlamento Europeo
+          y del Consejo de 27 de abril de 2016 relativo a la protección de las
+          personas físicas (RGPD), así como con la Ley 34/2002, de 11 de julio,
+          de Servicios de la Sociedad de la Información y Comercio Electrónico
+          (LSSICE o LSSI).
+        </p>
+        <h2 class="section-avisos__titulo">
+          RESPONSABLE DEL TRATAMIENTO DE TUS DATOS PERSONALES.
+        </h2>
+        <ul class="section-avisos__texto">
+          <li>Identidad del Responsable: [VUESTRO NOMBRE]</li>
+          <li>NIF/CIF: [VUESTRO DNI/NÚMERO SOCIEDAD]</li>
+          <li>Dirección: [VUESTRA DIRECCIÓN PERSONAL/DOMICILIO</li>
+          <li>Correo electrónico: [VUESTRO EMAIL]</li>
+          <li>Actividad: [VUESTRA ACTIVIDAD]</li>
+        </ul>
+        <p class="section-avisos__texto">
+          A efectos de lo previsto en el Reglamento General de Protección de
+          Datos antes citado, los datos personales que me envíes a través de los
+          formularios de la web, recibirán el tratamiento de datos de “Usuarios
+          de la web y suscriptores”. Para el tratamiento de datos de mis
+          usuarios, implemento todas las medidas técnicas y organizativas de
+          seguridad establecidas en la legislación vigente.
+        </p>
+        <h2 class="section-avisos__titulo">¿CÓMO HEMOS OBTENIDO TUS DATOS?</h2>
+        <p class="section-avisos__texto">
+          Los datos personales que tratamos en [VUESTRA MARCA] proceden de:
+        </p>
+        <ul class="section-avisos__texto">
+          <li>Formulario de contacto</li>
+          <li>Formulario de registro</li>
+          <li>Formulario de acceso a la web</li>
+          <li>Formulario de venta</li>
+          <li>Formulario de modificación de datos</li>
+          <li>Formulario de baja</li>
+        </ul>
+        <h2 class="section-avisos__titulo">DERECHOS DE USUARIOS</h2>
+        <p class="section-avisos__texto">
+          Cualquier persona tiene derecho a obtener confirmación sobre si en
+          [VUESTRA MARCA] estoy tratando datos personales que me conciernen, o
+          no. Las personas interesadas tienen derecho a:
+        </p>
+        <ul class="section-avisos__texto">
+          <li>
+            Solicitar el acceso a los datos personales relativos al interesado.
+          </li>
+          <li>Solicitar su rectificación o supresión.</li>
+          <li>Solicitar la limitación de su tratamiento.</li>
+          <li>Oponerse al tratamiento.</li>
+          <li>Solicitar la portabilidad de los datos.</li>
+        </ul>
+        <p class="section-avisos__texto">
+          Los interesados podrán acceder a sus datos personales, así como a
+          solicitar la rectificación de los datos inexactos o, en su caso,
+          solicitar su supresión cuando, entre otros motivos, los datos ya no
+          sean necesarios para los fines que fueron recogidos. En determinadas
+          circunstancias, los interesados podrán solicitar la limitación del
+          tratamiento de sus datos, en cuyo caso únicamente los conservaré para
+          el ejercicio o la defensa de reclamaciones.
+        </p>
+        <p class="section-avisos__texto">
+          En determinadas circunstancias y por motivos relacionados con su
+          situación particular, los interesados podrán oponerse al tratamiento
+          de sus datos. [VUESTRA MARCA] dejará de tratar los datos, salvo por
+          motivos legítimos imperiosos, o el ejercicio o la defensa de posibles
+          reclamaciones. Cómo interesado, tienes derecho a recibir los datos
+          personales que te incumban, que me hayas facilitado y en un formato
+          estructurado, de uso común y lectura mecánica, y a transmitirlos a
+          otro responsable del tratamiento cuando:
+        </p>
+        <ul class="section-avisos__texto">
+          <li>El tratamiento esté basado en el consentimiento.</li>
+          <li>Los datos hayan sido facilitados por la persona interesada.</li>
+          <li>El tratamiento se efectúe por medios automatizados.</li>
+        </ul>
+        <p class="section-avisos__texto">
+          Al ejercer tu derecho a la portabilidad de los datos, tendrás derecho
+          a que los datos personales se transmitan directamente de responsable a
+          responsable cuando sea técnicamente posible. Los interesados también
+          tendrán derecho a la tutela judicial efectiva y a presentar una
+          reclamación ante la autoridad de control, en este caso, la Agencia
+          Española de Protección de Datos, si consideran que el tratamiento de
+          datos personales que le conciernen infringe el Reglamento.
+        </p>
+        <h2 class="section-avisos__titulo">
+          FINALIDAD DE SUS DATOS PERSONALES
+        </h2>
+        <p class="section-avisos__texto">
+          Cuando un usuario se conecta con esta web por ejemplo para mandar un
+          correo al titular, registrarse, suscribirse o realizar alguna
+          contratación, está facilitando información de carácter personal de la
+          que es responsable [VUESTRA MARCA]. Esa información puede incluir
+          datos de carácter personal como pueden ser tu dirección IP, nombre,
+          dirección física, dirección de correo electrónico, número de teléfono,
+          y otra información. Al facilitar esta información, el usuario da su
+          consentimiento para que su información sea recopilada, utilizada,
+          gestionada y almacenada por [VUESTRO DOMINIO], sólo como se describe
+          en el Aviso Legal y en la presente Política de Privacidad. En [VUESTRA
+          MARCA] existen diferentes sistemas de captura de información personal
+          y trato la información que me facilitan las personas interesadas con
+          el siguiente fin por cada sistema de captura (formularios): [CADA UNO
+          LOS FORMULARIOS QUE TENGA, Y ADAPTARLO A LOS CAMPOS QUE TENGÁIS EN
+          CADA FORMULARIO]
+        </p>
+        <ul class="section-avisos__texto">
+          <li>
+            Formulario de contacto:Solicitamos los siguientes datos personales:
+            Nombre, Email y opcionalmente, tu teléfono, para responder a los
+            requerimientos de los usuarios de [VUESTRO DOMINIO]. Por ejemplo,
+            podemos utilizar esos datos para responder a tu solicitud y dar
+            respuesta a las dudas, quejas, comentarios o inquietudes que puedas
+            tener relativas a la información incluida en la web, los servicios
+            que se prestan a través de la web, el tratamiento de sus datos
+            personales, cuestiones referentes a los textos legales incluidos en
+            la web, así como cualesquiera otras consultas que puedas tener y que
+            no estén sujetas a las condiciones de contratación. Te informo que
+            los datos que nos facilitas estarán ubicados en los servidores de
+            Godaddy dentro de la UE.
+          </li>
+          <li>
+            Formulario de registro:En este caso, solicitamos los siguientes
+            datos personales: Usuario, contraseña, nombre, apellidos, género,
+            DNI/Pasaporte, fecha de nacimiento, email, móvil, provincia,
+            localidad, código postal y dirección completa para gestionar [EL
+            SERVICIO DE CADA UNO]. Te informo que los datos que nos facilitas
+            estarán ubicados en los servidores de Godaddy dentro de la UE.
+          </li>
+          <li>
+            Formulario de acceso a la web:Para acceder a los apartados ocultos
+            para usuarios no registrados en la web, se deben facilitar los datos
+            de usuario y contraseña facilitados en el formulario de registro. Te
+            informo que los datos que nos facilitas estarán ubicados en los
+            servidores de Godaddy dentro de la UE.
+          </li>
+          <li>
+            Formulario de venta:El usuario dispone de diferentes formularios de
+            venta sujetos a las condiciones de contratación especificadas para
+            cada servicio donde se le requerirán datos de pago que serán
+            recabados y gestionados por las pasarelas de pagos utilizadas por la
+            web. En este caso PayPal (www.paypal.com) y/o Stripe
+            (www.stripe.com).
+          </li>
+          <li>
+            Formulario de modificación de datos: En este caso, solicitamos de
+            forma opcional alguno o la totalidad de los siguientes datos
+            personales, según sean unos u otros los datos a modificar: Nombre,
+            apellidos, género, DNI/Pasaporte, fecha de nacimiento, email, móvil,
+            provincia, localidad, código postal y dirección completa para
+            modificar los datos facilitados en el formulario de registro para
+            actualizarlos en la base de datos si éstos son erróneos o han
+            quedado desfasados. Te informo que los datos que nos facilitas
+            estarán ubicados en los servidores de Godaddy dentro de la UE.
+          </li>
+          <li>
+            Formulario de baja: En este caso, solicitamos el email de registro
+            para dar de baja al usuario y borrar todos los datos del usuario que
+            [VUESTRA MARCA] tuviera registrados, de forma opcional se podrá
+            incluir un mensaje y valorar la experiencia. Te informo que los
+            datos que nos facilitas estarán ubicados en los servidores de
+            Godaddy (proveedor de [VUESTRA MARCA]) dentro de la UE.
+          </li>
+          <li>
+            Existen otras finalidades por la que trato sus datos personales: •
+            Para garantizar el cumplimiento de las condiciones de uso y la ley
+            aplicable. Esto puede incluir el desarrollo de herramientas y
+            algoritmos que ayudan a esta web a garantizar la confidencialidad de
+            los datos personales que recoge.
+          </li>
+          <li>Para apoyar y mejorar los servicios que ofrece esta web.</li>
+          <li>
+            También se recogen otros datos no identificativos que se obtienen
+            mediante algunas cookies que se descargan en el ordenador del
+            usuario cuando navega en esta web que detallo en la política de
+            cookies.
+          </li>
+          <li>
+            Para gestionar las redes sociales. [VUESTRA MARCA] puede tener
+            presencia en redes sociales. El tratamiento de los datos que se
+            lleve a cabo de las personas que se hagan seguidoras en las redes
+            sociales de las páginas oficiales de [VUESTRO DOMINIO], se regirá
+            por este apartado. Así como por aquellas condiciones de uso,
+            políticas de privacidad y normativas de acceso que pertenezcan a la
+            red social que proceda en cada caso y aceptadas previamente por el
+            usuario de [VUESTRA MARCA]. Tratará sus datos con las finalidades de
+            administrar correctamente su presencia en la red social, informando
+            de actividades, productos o servicios de [VUESTRA MARCA]. Así como
+            para cualquier otra finalidad que las normativas de las redes
+            sociales permitan. En ningún caso utilizaré los perfiles de
+            seguidores en redes sociales para enviar publicidad de manera
+            individual.
+          </li>
+        </ul>
+        <p class="section-avisos__texto">
+          De acuerdo a lo establecido en el reglamento general de protección de
+          datos europeo (RGPD) 2016/679, [VUESTRA MARCA] con domicilio en
+          [VUESTRA DIRECCIÓN PERSONAL/DOMICILIO SOCIAL]. Será responsable del
+          tratamiento de los datos correspondientes a Usuarios de la web y
+          suscriptores. [VUESTRA MARCA] no vende, alquila ni cede datos de
+          carácter personal que puedan identificar al usuario, ni lo hará en el
+          futuro, a terceros sin el consentimiento previo. Sin embargo, en
+          algunos casos se pueden realizar colaboraciones con otros
+          profesionales, en esos casos, se requerirá consentimiento a los
+          usuarios informando sobre la identidad del colaborador y la finalidad
+          de la colaboración. Siempre se realizará con los más estrictos
+          estándares de seguridad.
+        </p>
+        <h2 class="section-avisos__titulo">REMARKETING</h2>
+        <p class="section-avisos__texto">
+          La función de remarketing nos permite llegar a las personas que hayan
+          visitado [VUESTRO DOMINIO] anteriormente y asociar una audiencia
+          determinada a un mensaje concreto. El remarketing es un método para
+          conseguir que los usuarios que han visitado este sitio vuelvan a
+          hacerlo. Como usuario de [VUESTRA MARCA] te informo que estamos
+          recopilando información para esta función de remarketing en [VUESTRO
+          DOMINIO]. La información que recopilo gracias a esta función es
+          recogida por las cookies de Facebook. Puedes conocer los datos que
+          recopilan estas cookies en las siguientes políticas de privacidad de
+          cada servicio:
+        </p>
+        <p class="section-avisos__texto">
+          Facebook Si no quiere que su información sea recopilada por estas
+          cookies, puede inhabilitar el uso de cookies de Google a través de la
+          Configuración de anuncios de Google. También puedes inhabilitar el uso
+          de cookies de un proveedor tercero a través de la página de
+          inhabilitación de Network Advertising Initiative.
+        </p>
+        <p class="section-avisos__texto">
+          Este tipo de servicios permite interactuar con redes sociales u otras
+          plataformas externas directamente desde las páginas de esta web. Las
+          interacciones y la información obtenida por esta web siempre estarán
+          sometidas a la configuración de privacidad del usuario en cada red
+          social. En caso de que se instale un servicio que permita interactuar
+          con redes sociales, es posible que, aunque los usuarios no utilicen el
+          servicio, éste recoja datos de tráfico web relativos a las páginas en
+          las que estén instalados.
+        </p>
+        <h2 class="section-avisos__titulo">FACEBOOK ADS</h2>
+        <p class="section-avisos__texto">
+          En [VUESTRO DOMINIO] utilizo Facebook ads, la plataforma de publicidad
+          de Facebook, que nos permite crear campañas y anuncios. Al generar un
+          anuncio, se puede segmentar el público por:
+        </p>
+        <ul class="section-avisos__texto">
+          <li>Datos demográficos (edad, sexo, etc.)</li>
+          <li>ntereses (actividades, aficiones, etc.)</li>
+          <li>Lo que compran en internet y por otros canales.</li>
+        </ul>
+        <p class="section-avisos__texto">
+          Los datos obtenidos a través de Facebook ads están sujetos a esta
+          política de privacidad desde el momento en que el usuario deja sus
+          datos en el formulario de esta web para unirse al boletín de
+          suscripciones. En ningún caso se utilizará la información procedente
+          de Facebook con una finalidad diferente.
+        </p>
+        <h2>LEGITIMACIÓN PARA EL TRATAMIENTO DE SUS DATOS</h2>
+        <p class="section-avisos__texto">
+          La base legal para el tratamiento de sus datos es: el consentimiento.
+          Para contactar o realizar comentarios en esta web se requiere el
+          consentimiento con esta política de privacidad. La oferta prospectiva
+          o comercial de productos y servicios está basada en el consentimiento
+          que se le solicita, sin que en ningún caso la retirada de este
+          consentimiento condicione la ejecución del contrato de suscripción.  
+        </p>
+        <h2 class="section-avisos__titulo">CATEGORÍA DE LOS DATOS RECOGIDOS</h2>
+        <p class="section-avisos__texto">
+          Las categorías de datos que se tratan son datos identificativos. En
+          ningún caso se tratan categorías de datos especialmente protegidos.
+        </p>
+        <h2 class="section-avisos__titulo">
+          ¿POR CUÁNTO TIEMPO CONSERVARÉ SUS DATOS?
+        </h2>
+        <p class="section-avisos__texto">
+          Los datos personales proporcionados se conservarán hasta que el
+          interesado solicite su supresión de forma expresa.
+        </p>
+        <h2 class="section-avisos__titulo">
+          ¿A QUÉ DESTINATARIOS SE COMUNICARÁN SUS DATOS?
+        </h2>
+        <p class="section-avisos__texto">
+          A los estrictamente necesarios para el desarrollo de la actividad,
+          [VUESTRO DOMINIO], comparte datos con los siguientes prestadores bajo
+          sus correspondientes condiciones de privacidad:
+        </p>
+        <ul class="section-avisos__texto">
+          <li>
+            Google Analytics: un servicio analítico de web prestado por Google,
+            Inc., una compañía de Delaware cuya oficina principal está en 1600
+            Amphitheatre Parkway, Mountain View (California), CA 94043, Estados
+            Unidos (“Google”). Google Analytics utiliza “cookies”, que son
+            archivos de texto ubicados en tu ordenador, para ayudar a [VUESTRO
+            DOMINIO] a analizar el uso que hacen los usuarios del sitio web. La
+            información que genera la cookie acerca de su uso de [VUESTRO
+            DOMINIO] (incluyendo tu dirección IP) será directamente transmitida
+            y archivada por Google en los servidores de Estados Unidos.
+          </li>
+          <li>
+            Hosting: Godaddy, con domicilio en EEUU. Más información en:
+            www.godaddy.com  trata los datos con la finalidad de realizar sus
+            servicios de hosting a [VUESTRA MARCA].
+          </li>
+          <li>
+            Plataforma web: Automattic Inc., con domicilio en EEUU. Más
+            información en: https://es.wordpress.com/ (Automattic Inc.).
+            Automattic Inc. trata los datos con la finalidad de realizar sus
+            servicios de plataforma web a [VUESTRA MARCA].
+          </li>
+          <li>
+            Email marketing: Mailchimp, con domicilio en EEUU. Más información
+            en: www.mailchimp.com. Mailchimp trata los datos con la finalidad de
+            realizar sus servicios de email marketing a [VUESTRA MARCA].
+            Wishpond con domicilio en Canadá trata los datos con la finalidad de
+            realizar servicios de email marketing, análisis y concursos. Más
+            información en www.wishpond.com
+          </li>
+        </ul>
+        <h2 class="section-avisos__titulo">NAVEGACIÓN</h2>
+        <p class="section-avisos__texto">
+          Al navegar por [VUESTRO DOMINIO] se pueden recoger datos no
+          identificables, que pueden incluir, direcciones IP, ubicación
+          geográfica (aproximadamente), un registro de cómo se utilizan los
+          servicios y sitios, y otros datos que no pueden ser utilizados para
+          identificar al usuario. Entre los datos no identificativos están
+          también los relacionados a tus hábitos de navegación a través de
+          servicios de terceros. Esta web utiliza los siguientes servicios de
+          análisis de terceros:
+        </p>
+        <ul class="section-avisos__texto">
+          <li>Google Analytics.</li>
+          <li>Pixel de Facebook.</li>
+        </ul>
+        <p class="section-avisos__texto">
+          Esta información se emplea para analizar tendencias, administrar el
+          sitio, rastrear los movimientos de los usuarios alrededor del sitio y
+          para recopilar información demográfica sobre la base de usuarios en su
+          conjunto.
+        </p>
+        <h2 class="section-avisos__titulo">SECRETO Y SEGURIDAD DE LOS DATOS</h2>
+        <p class="section-avisos__texto">
+          [VUESTRA MARCA] se compromete en el uso y tratamiento de los datos
+          incluidos personales de los usuarios, respetando su confidencialidad y
+          a utilizarlos de acuerdo con la finalidad del mismo, así como a dar
+          cumplimiento a su obligación de guardarlos y adaptar todas las medidas
+          para evitar la alteración, pérdida, tratamiento o acceso no
+          autorizado, de conformidad con lo establecido en la normativa vigente
+          de protección de datos. [VUESTRA MARCA] no puede garantizar la
+          absoluta inexpugnabilidad de la red Internet y por tanto la violación
+          de los datos mediante accesos fraudulentos a ellos por parte de
+          terceros.
+        </p>
+        <p class="section-avisos__texto">
+          Con respecto a la confidencialidad del procesamiento, [VUESTRA MARCA]
+          se asegurará de que cualquier persona que esté autorizada por [VUESTRA
+          MARCA] para procesar los datos del cliente (incluido su personal,
+          colaboradores y prestadores), estará bajo la obligación apropiada de
+          confidencialidad (ya sea un deber contractual o legal). Cuando se
+          presente algún incidente de seguridad, al darse cuenta el titular
+          legítimo de [VUESTRA MARCA], deberá notificar al Cliente sin demoras
+          indebidas y deberá proporcionar información oportuna relacionada con
+          el Incidente de Seguridad tal como se conozca o cuando el Cliente lo
+          solicite razonablemente.
+        </p>
+        <h2 class="section-avisos__titulo">
+          EXACTITUD Y VERACIDAD DE LOS DATOS
+        </h2>
+        <p class="section-avisos__texto">
+          Como usuario, eres el único responsable de la veracidad y corrección
+          de los datos que remitas a [VUESTRO DOMINIO] exonerando a [VUESTRA
+          MARCA], de cualquier responsabilidad al respecto. Los usuarios
+          garantizan y responden, en cualquier caso, de la exactitud, vigencia y
+          autenticidad de los datos personales facilitados, y se comprometen a
+          mantenerlos debidamente actualizados. El usuario acepta proporcionar
+          información completa y correcta en el formulario de contacto o
+          suscripción.
+        </p>
+        <h2 class="section-avisos__titulo">ACEPTACIÓN Y CONSENTIMIENTO</h2>
+        <p class="section-avisos__texto">
+          El usuario declara haber sido informado de las condiciones sobre
+          protección de datos de carácter personal, aceptando y consintiendo el
+          tratamiento de los mismos por parte de [VUESTRA MARCA] en la forma y
+          para las finalidades indicadas en esta política de privacidad.
+        </p>
+        <h2 class="section-avisos__titulo">REVOCABILIDAD</h2>
+        <p class="section-avisos__texto">
+          El consentimiento prestado, tanto para el tratamiento como para la
+          cesión de los datos de los interesados, es revocable en cualquier
+          momento comunicándolo a [VUESTRA MARCA] en los términos establecidos
+          en esta Política para el ejercicio de los derechos ARCO. Esta
+          revocación en ningún caso tendrá carácter retroactivo.
+        </p>
+        <h2 class="section-avisos__titulo">
+          CAMBIOS EN LA POLÍTICA DE PRIVACIDAD
+        </h2>
+        <p class="section-avisos__texto">
+          [VUESTRA MARCA] se reserva el derecho a modificar la presente política
+          para adaptarla a novedades legislativas o jurisprudenciales, así como
+          a prácticas de la industria. En dichos supuestos, [VUESTRA MARCA]
+          anunciará en esta página los cambios introducidos con razonable
+          antelación a su puesta en práctica.
+        </p>
+        <h2 class="section-avisos__titulo">CORREOS COMERCIALES</h2>
+        <p class="section-avisos__texto">
+          De acuerdo con la LSSICE, [VUESTRO DOMINIO] no realiza prácticas de
+          SPAM, por lo que no envía correos comerciales por vía electrónica que
+          no hayan sido previamente solicitados o autorizados por el usuario.
+          Conforme a lo dispuesto en la Ley 34/2002 de Servicios de la Sociedad
+          de la Información y de comercio electrónico, [VUESTRO DOMINIO] se
+          compromete a no enviar comunicaciones de carácter comercial sin
+          identificarlas debidamente.
+        </p>
+        <p class="section-avisos__texto">
+          Documento revisado el [FECHA ACTUAL].
+        </p>
+      </section>
+    </main>
+    <footer class="footer">
+      <h3 class="footer__texto">Síguenos:</h3>
+      <div class="footer__pie-pagina">
+        <div class="footer__redSocial">
+          <a href="https://www.instagram.com/" target="_blank"
+            ><img
+              class="hover"
+              src="img/1-icons/iconos-footer/instagram-.png"
+              alt="Instagram"
+          /></a>
+          <a href="https://www.facebook.com/" target="_blank"
+            ><img
+              class="hover"
+              src="img/1-icons/iconos-footer/facebook-.png"
+              alt="Facebook"
+          /></a>
+          <a href="#"
+            ><img
+              class="hover"
+              src="img/1-icons/iconos-footer/whatsapp-.png"
+              alt="Facebook"
+          /></a>
+        </div>
+      </div>
+      <div class="avisos">
+        <div class="avisos__copy">
+          <small>&copy;2022 Todos los derechos reservados.</small>
+        </div>
+        <a href="aviso-legal.html" class="avisos__link">Aviso legal</a>
+        <span>&nbsp;|&nbsp;</span>
+        <a href="politica-privacidad.html" class="avisos__link"
+          >Política de privacidad</a
+        >
+        <span>&nbsp;|&nbsp;</span>
+        <a href="politica-cookies.html" class="avisos__link"
+          >Política de cookies</a
+        >
+      </div>
+    </footer>
+  </body>
+</html>

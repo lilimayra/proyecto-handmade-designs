@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <title>Mayra Handmade Designs</title>
+    <link rel="icon" type="image/png" href="favicon/img/favicon.png" />
+    <link rel="apple-touch-icon" href="touch-icon-iphone.png" />
+    <link
+      rel="apple-touch-icon"
+      sizes="152x152"
+      href="/static/img/apple-touch-icon/touch-icon-ipad.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/static/img/apple-touch-icon/touch-icon-iphone-retina.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="167x167"
+      href="/static/img/apple-touch-icon/touch-icon-ipad-retina.png"
+    />
+    <meta name="theme-color" content="#3c790a" />
+    <meta
+      name="theme-color"
+      content="#ecd96f"
+      media="(prefers-color-scheme: light)"
+    />
+    <meta
+      name="theme-color"
+      content="#0b3e05"
+      media="(prefers-color-scheme: dark)"
+    />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no"
+    />
+    <meta name="author" content="Tu nombre" />
+    <meta name="generator" content="Clojure" />
+    <meta name="keywords" content="html, css, javascript" />
+    <meta name="description" content="my description..." />
+    <meta property="og:image" content="img/screenshot.png" />
+    <meta property="og:title" content="The Rock" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@cuenta" />
+    <meta name="twitter:creator" content="@cuenta" />
+    <meta property="og:image:secure_url" content="https://..." />
+    <meta property="og:image:type" content="image/jpeg" />
+    <meta property="og:image:width" content="400" />
+    <meta property="og:image:height" content="300" />
+    <meta property="og:image:alt" content="" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+    />
+    <link rel="stylesheet" type="text/css" href="css/main.css" />
+    <!-- CSS -->
+    <link
+      href="css/mobile.css"
+      rel="stylesheet"
+      media="all and (max-width: 600px)"
+    />
+    <link
+      href="css/desktop.css"
+      rel="stylesheet"
+      media="all and (min-width: 601px)"
+    />
+    <!-- FIN CSS -->
+    <!--JavaScript-->
+    <script src="https://unpkg.com/alpinejs" defer></script>
+  </head>
+  <body>
+    <header
+      class="header"
+      x-data="{ open: false, isTopScroll: true }"
+      @scroll.window="isTopScroll = window.pageYOffset === 0"
+      :class="isTopScroll ? '' : 'header--background'"
+    >
+      <div class="container">
+        <button class="button header__open" @click="open = true">
+          <img src="img/1-icons/iconos-header/menu.png" alt="Abrir menu" />
+        </button>
+        <a class="header__logo" href="home.html">
+          <img
+            src="img/2-logo/logo-preview.png"
+            alt="Logo"
+            class="header__image header__logo"
+          />
+        </a>
+        <a
+          class="button header__carrito"
+          href="https://www.etsy.com/es/?ref=lgo"
+        >
+          <img
+            src="img/1-icons/iconos-header/carrito.png"
+            alt="Carrito de compra"
+          />
+        </a>
+        <nav class="nav" :class="open ? 'nav--show' : ''">
+          <div class="nav__container-button">
+            <button class="button header__close" @click="open = false">
+              <img
+                src="img/1-icons/iconos-header/close.png"
+                alt="Cerrar menu"
+              />
+            </button>
+          </div>
+          <div class="nav__container-links">
+            <ul class="nav__ul">
+              <li class="nav__item">
+                <a href="index.html" class="nav__link">¡Hola!</a>
+              </li>
+              <li class="nav__item">
+                <a href="vamonos-de-compras.html" class="nav__link"
+                  >¡Vamonos de compras!</a
+                >
+              </li>
+              <li class="nav__item">
+                <a href="lo-que-te-ofrecemos.html" class="nav__link"
+                  >Lo que te ofrecemos</a
+                >
+              </li>
+              <li class="nav__item">
+                <a href="contacto.html" class="nav__link">Contacto</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <main>
+      <section class="section-avisos">
+        <h1 class="section-avisos__titulo">POLÍTICA DE COOKIES</h1>
+        <p class="section-avisos__texto">
+          En esta web recopilamos y utilizamos la información según indicamos en
+          nuestra política de privacidad. Una de las formas en las que
+          recopilamos información es a través del uso de la tecnología llamada
+          “cookies”. En [VUESTRA MARCA], utilizamos cookies para varias cosas.
+        </p>
+        <h2 class="section-avisos__titulo">¿QUÉ ES UNA COOKIE?</h2>
+        <p class="section-avisos__texto">
+          Una “cookie” es una pequeña cantidad de texto que se almacena en tu
+          navegador (como Chrome de Google o Safari de Apple) cuando navegas por
+          la mayoría de los sitios web.
+        </p>
+        <h2 class="section-avisos__titulo">¿QUÉ NO ES UNA COOKIE?</h2>
+        <p class="section-avisos__texto">
+          No es un virus, ni un troyano, ni un gusano, ni spam, ni spyware, ni
+          abre ventanas pop-up.
+        </p>
+        <h2 class="section-avisos__titulo">
+          ¿QUÉ INFORMACIÓN ALMACENA UNA COOKIE?
+        </h2>
+        <p class="section-avisos__texto">
+          Las cookies no suelen almacenar información sensible sobre usted, como
+          tarjetas de crédito o datos bancarios, fotografías o información
+          personal, etc. Los datos que guardan son de carácter técnico,
+          estadísticos, preferencias personales, personalización de contenidos,
+          etc.
+        </p>
+        <p class="section-avisos__texto">
+          El servidor web no le asocia a usted como persona sino a su navegador
+          web. De hecho, si usted navega habitualmente con el navegador Chrome y
+          prueba a navegar por la misma web con el navegador Firefox, verá que
+          la web no se da cuenta que es usted la misma persona porque en
+          realidad está asociando la información al navegador, no a la persona.
+        </p>
+        <h2 class="section-avisos__titulo">¿QUÉ TIPO DE COOKIES EXISTEN?</h2>
+        <ul class="section-avisos__texto">
+          <li>
+            Cookies técnicas:Son las más elementales y permiten, entre otras
+            cosas, saber cuándo está navegando un humano o una aplicación
+            automatizada, cuándo navega un usuario anónimo y uno registrado,
+            tareas básicas para el funcionamiento de cualquier web dinámica.
+          </li>
+          <li>
+            Cookies de análisis:Recogen información sobre el tipo de navegación
+            que está realizando, las secciones que más utiliza, productos
+            consultados, franja horaria de uso, idioma, etc.
+          </li>
+          <li>
+            Cookies publicitarias:Muestran publicidad en función de su
+            navegación, su país de procedencia, idioma, etc.
+          </li>
+        </ul>
+        <h2 class="section-avisos__titulo">
+          ¿QUÉ SON LAS COOKIES PROPIAS Y LAS DE TERCEROS?
+        </h2>
+        <p class="section-avisos__texto">
+          Las cookies propias son las generadas por la página que está visitando
+          y las de terceros son las generadas por servicios o proveedores
+          externos como Mailchimp, Mailrelay, Facebook, Twitter, Google adsense,
+          etc.
+        </p>
+        <h2 class="section-avisos__titulo">¿QUÉ COOKIES UTILIZA ESTA WEB?</h2>
+        <p class="section-avisos__texto">
+          Esta web utiliza cookies propias y de terceros. En este sitio web se
+          utilizan las siguientes cookies que se detallan a continuación:
+        </p>
+        <ul class="section-avisos__texto">
+          <li>
+            Cookies propias [EN EL CASO DE CADA UNO PUEDEN VARIAR]: • Inicio de
+            sesión: Las cookies para iniciar sesión te permiten entrar y salir
+            de tu cuenta de [VUESTRA MARCA].
+          </li>
+          <li>
+            Personalización: Las cookies nos ayudan a recordar con qué personas
+            o sitios web has interactuado, para que podamos mostrarte contenido
+            relacionado.
+          </li>
+          <li>
+            Preferencias: Las cookies nos permite recordar tus ajustes y
+            preferencias, como el idioma preferido y tu configuración de
+            privacidad.
+          </li>
+          <li>
+            Seguridad: Utilizamos cookies para evitarte riesgos de seguridad.
+            Principalmente para detectar cuándo alguien está intentando piratear
+            tu cuenta de [VUESTRA MARCA].
+          </li>
+        </ul>
+        <p class="section-avisos__texto">
+          Cookies de terceros: Esta web utiliza servicios de análisis,
+          concretamente, Google Analytics para ayudar al website a analizar el
+          uso que hacen los usuarios del sitio web y mejorar la usabilidad del
+          mismo, pero en ningún caso se asocian a datos que pudieran llegar a
+          identificar al usuario. Google Analytics, es un servicio analítico de
+          web prestado por Google, Inc., El usuario puede consultar aquí el tipo
+          de cookies utilizadas por Google.
+        </p>
+        <p class="section-avisos__texto">
+          Luz Soluciones TIC, S.L.U. es usuario de la plataforma de suministro y
+          alojamiento de blogs WordPress, propiedad de la empresa norteamericana
+          Automattic, Inc. A tales efectos, los usos de tales cookies por los
+          sistemas nunca están bajo control o gestión del responsable de la web,
+          pueden cambiar su función en cualquier momento, y entrar cookies
+          nuevas. Estas cookies tampoco reportan al responsable de esta web
+          beneficio alguno. Automattic, Inc., utiliza además otras cookies con
+          la finalidad de ayudar a identificar y rastrear a los visitantes de
+          los sitios de WordPress, conocer el uso que hacen del sitio web de
+          Automattic, así como sus preferencias de acceso al mismo, tal y como
+          se recoge en el apartado “Cookies” de su política de privacidad.
+        </p>
+        <p class="section-avisos__texto">
+          Las cookies de redes sociales pueden almacenarse en su navegador
+          mientras navega por [VUESTRO DOMINIO] por ejemplo, cuando utiliza el
+          botón de compartir contenidos de [VUESTRO DOMINIO] en alguna red
+          social. A continuación tienes información sobre las cookies de las
+          redes sociales que utiliza esta web en sus propias políticas de
+          cookies:
+        </p>
+        <ul class="section-avisos__texto">
+          <li>
+            Cookies de Facebook, ver más información en su política de cookies
+          </li>
+          <li>
+            Cookies de Twitter, ver más información en su política de cookies
+          </li>
+          <li>
+            Cookies de Google+, ver más información en su política de cookies
+          </li>
+          <li>
+            Cookies de Linkedin, ver más información en su política de cookies
+          </li>
+          <li>
+            Cookies de Youtube, ver más información en su política de cookies
+          </li>
+        </ul>
+        <p class="section-avisos__texto">
+          Llevamos a cabo acciones de remarketing mediante Google AdWords, que
+          utiliza las cookies para ayudarnos a ofrecer anuncios en línea
+          específico basado en visitas anteriores a nuestro sitio
+          web. Google utiliza esta información para mostrar anuncios en varios
+          sitios web de terceros a través de Internet. Estas cookies están a
+          punto de expirar y no contienen información que pueda identificarle
+          personalmente. Por favor dirígete a la publicidad de Google Aviso de
+          privacidad para obtener más información. Llevamos a cabo acciones de
+          remarketing mediante Facebook ads, que utiliza las cookies para
+          ayudarnos a ofrecer anuncios en línea específico basado en visitas
+          anteriores a nuestro sitio web.
+        </p>
+        <h2 class="section-avisos__titulo">¿SE PUEDEN ELIMINAR LAS COOKIES?</h2>
+        <p class="section-avisos__texto">
+          Sí, y no sólo eliminar, también bloquear, de forma general o
+          particular para un dominio específico. Para eliminar las cookies de un
+          sitio web debe ir a la configuración de su navegador y allí podrá
+          buscar las asociadas al dominio en cuestión y proceder a su
+          eliminación.
+        </p>
+        <ul class="section-avisos__texto">
+          <li>Configuración de cookies para Google Chrome</li>
+          <li>Configuración de cookies para Apple Safari</li>
+          <li>Configuración de cookies para Internet Explorer</li>
+          <li>Configuración de cookies para Mozilla Firefox</li>
+        </ul>
+        <h2 class="section-avisos__titulo">
+          MÁS INFORMACIÓN SOBRE LAS COOKIES
+        </h2>
+        <p class="section-avisos__texto">
+          Puedes consultar el reglamento sobre cookies publicado por la Agencia
+          Española de Protección de Datos en su “Guía sobre el uso de las
+          cookies” y obtener más información sobre las cookies en
+          Internet, http://www.aboutcookies.org/ Si desea tener un mayor control
+          sobre la instalación de cookies, puede instalar programas o
+          complementos a su navegador, conocidos como herramientas de “Do Not
+          Track”, que le permitirán escoger aquellas cookies que desea permitir.
+        </p>
+        <p class="section-avisos__texto">
+          Documento revisado el [FECHA ACTUAL]
+        </p>
+      </section>
+    </main>
+    <footer class="footer">
+      <h3 class="footer__texto">Síguenos:</h3>
+      <div class="footer__pie-pagina">
+        <div class="footer__redSocial">
+          <a href="https://www.instagram.com/" target="_blank"
+            ><img
+              class="hover"
+              src="img/1-icons/iconos-footer/instagram-.png"
+              alt="Instagram"
+          /></a>
+          <a href="https://www.facebook.com/" target="_blank"
+            ><img
+              class="hover"
+              src="img/1-icons/iconos-footer/facebook-.png"
+              alt="Facebook"
+          /></a>
+          <a href="#"
+            ><img
+              class="hover"
+              src="img/1-icons/iconos-footer/whatsapp-.png"
+              alt="Facebook"
+          /></a>
+        </div>
+      </div>
+      <div class="avisos">
+        <div class="avisos__copy">
+          <small>&copy;2022 Todos los derechos reservados.</small>
+        </div>
+        <a href="aviso-legal.html" class="avisos__link">Aviso legal</a>
+        <span>&nbsp;|&nbsp;</span>
+        <a href="politica-privacidad.html" class="avisos__link"
+          >Política de privacidad</a
+        >
+        <span>&nbsp;|&nbsp;</span>
+        <a href="politica-cookies.html" class="avisos__link"
+          >Política de cookies</a
+        >
+      </div>
+    </footer>
+  </body>
+</html>

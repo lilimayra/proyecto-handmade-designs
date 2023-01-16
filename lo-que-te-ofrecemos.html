@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <title>Mayra Handmade Designs</title>
+    <link rel="icon" type="image/png" href="favicon/img/favicon.png" />
+    <link rel="apple-touch-icon" href="touch-icon-iphone.png" />
+    <link
+      rel="apple-touch-icon"
+      sizes="152x152"
+      href="/static/img/apple-touch-icon/touch-icon-ipad.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/static/img/apple-touch-icon/touch-icon-iphone-retina.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="167x167"
+      href="/static/img/apple-touch-icon/touch-icon-ipad-retina.png"
+    />
+    <meta name="theme-color" content="#3c790a" />
+    <meta
+      name="theme-color"
+      content="#ecd96f"
+      media="(prefers-color-scheme: light)"
+    />
+    <meta
+      name="theme-color"
+      content="#0b3e05"
+      media="(prefers-color-scheme: dark)"
+    />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no"
+    />
+    <meta name="author" content="Tu nombre" />
+    <meta name="generator" content="Clojure" />
+    <meta name="keywords" content="html, css, javascript" />
+    <meta name="description" content="my description..." />
+    <meta property="og:image" content="img/screenshot.png" />
+    <meta property="og:title" content="The Rock" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@cuenta" />
+    <meta name="twitter:creator" content="@cuenta" />
+    <meta property="og:image:secure_url" content="https://..." />
+    <meta property="og:image:type" content="image/jpeg" />
+    <meta property="og:image:width" content="400" />
+    <meta property="og:image:height" content="300" />
+    <meta property="og:image:alt" content="" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+    />
+    <link rel="stylesheet" type="text/css" href="css/main.css" />
+    <!-- CSS -->
+    <link
+      href="css/mobile.css"
+      rel="stylesheet"
+      media="all and (max-width: 600px)"
+    />
+    <link
+      href="css/desktop.css"
+      rel="stylesheet"
+      media="all and (min-width: 601px)"
+    />
+    <!-- FIN CSS -->
+    <!--JavaScript-->
+    <script src="https://unpkg.com/alpinejs" defer></script>
+  </head>
+  <body>
+    <header
+      class="header"
+      x-data="{ open: false, isTopScroll: true }"
+      @scroll.window="isTopScroll = window.pageYOffset === 0"
+      :class="isTopScroll ? '' : 'header--background'"
+    >
+      <div class="container">
+        <button class="button header__open" @click="open = true">
+          <img src="img/1-icons/iconos-header/menu.png" alt="Abrir menu" />
+        </button>
+        <a class="header__logo" href="index.html">
+          <img
+            src="img/2-logo/logo-preview.png"
+            alt="Logo"
+            class="header__image header__logo"
+          />
+        </a>
+        <a
+          class="button header__carrito"
+          href="https://www.etsy.com/es/?ref=lgo" target="_blank"
+        >
+          <img
+            src="img/1-icons/iconos-header/carrito.png"
+            alt="Carrito de compra"
+          />
+        </a>
+        <nav class="nav" :class="open ? 'nav--show' : ''">
+          <div class="nav__container-button">
+            <button class="button header__close" @click="open = false">
+              <img
+                src="img/1-icons/iconos-header/close.png"
+                alt="Cerrar menu"
+              />
+            </button>
+          </div>
+          <div class="nav__container-links">
+            <ul class="nav__ul">
+              <li class="nav__item">
+                <a href="hola.html" class="nav__link">¡Hola!</a>
+              </li>
+              <li class="nav__item">
+                <a href="vamonos-de-compras.html" class="nav__link"
+                  >¡Vamonos de compras!</a
+                >
+              </li>
+              <li class="nav__item">
+                <a href="lo-que-te-ofrecemos.html" class="nav__link"
+                  >Lo que te ofrecemos</a
+                >
+              </li>
+              <li class="nav__item">
+                <a href="contacto.html" class="nav__link">Contacto</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <main>
+      <section class="section-alquiler">
+        <h1 class="section-alquiler__titulo">Alquiler para eventos</h1>
+        <p>
+          <img
+            src="img/8-lo-que-ofrecemos/mix-cordon-mariposa.jpeg"
+            alt="vasito diseñado"
+          />
+        </p>
+        <h3 class="section-alquiler__subTitulo">
+          Los detalles de boda más originales con plantas
+        </h3>
+        <p class="section-alquiler__texto">
+          ¿Te casas? ¡¡Enhorabuena!! Se acerca un día lleno de emoción, alegría
+          y celebración. Un día para celebrar el amor rodeada de los tuyos y
+          disfrutar al máximo. Un momento para bailar, reír y compartir con
+          todos esos amigos y familiares que os acompañan el gran día. Y que
+          menos que darles un bonito detalle de boda como recuerdo. Los regalos
+          de invitados de bodas son una tradición que aún perdura, y una muy
+          buena forma de agradecer a tus invitados por estar presentes en tu
+          boda. Pero, ¿qué pasa si no tienes mucho presupuesto para regalos de
+          invitados de boda? No te preocupes, con nosotros te ayudaremos a
+          escoger el regalos para invitados de boda baratos que mejor se adapte
+          a ti. Encuentra un regalo que se ajuste a tu presupuesto y a tu estilo
+          de boda. Seguro que quieres regalar algo bonito, que te guste y que a
+          ellas les encante. Algo original y sorprendente con lo que sabes que
+          si o si aciertas...
+        </p>
+      </section>
+      <section class="section-eventos">
+        <h2 class="section-eventos__subTitulo">Regala un detalle original</h2>
+        <p>
+          <img
+            src="img/8-lo-que-ofrecemos/regalo-oficina.jpg"
+            alt="diseños en la oficina"
+          />
+        </p>
+        <p class="section-eventos__texto">
+          Ideal para renovar un espacio de tu oficina, Sin duda, los
+          trabajadores son el motor de cualquier negocio. Tenerlos contentos
+          significa mejor ambiente laboral y un equipo más colaborativo. Un
+          regalo como este les hará saber cuánto se les aprecia en la empresa y
+          vendrán más contentos a la oficina, seguro. No se ha hablado nunca de
+          un trabajador descontento al recibir de su empresa una muestra de
+          reconocimiento. Este reconocimiento se traduce en un mayor compromiso
+          por parte de los trabajadores que se sentirán más valorados. Y eso
+          tampoco ha perjudicado jamás a ningún negocio.
+        </p>
+        <p class="section-eventos__texto">
+          Por lo que si quieres que tus trabajadores sepan cuánto les aprecias,
+          se sientan valorados y haya mejor ambiente laboral, una planta de
+          oficina es tu mejor opción. Puedes escoger entre una gran variedad de
+          diseños disponibles en nuestro catálogo. Ponte en contacto con
+          nosotros y te ayudaremos a encontrar la opción que más se adapte a tus
+          necesidades.
+        </p>
+        <p class="section-eventos__texto">
+          Ponte en contacto con nosotros y te ayudaremos a encontrar la opción
+          que más se adapte a tus necesidades.
+        </p>
+      </section>
+      <section class="section-eventos">
+        <h2 class="section-eventos__titulo"> Preguntas frecuentes</h2>
+        <h3 class="section-eventos__subTitulo">
+          ¿Cómo alquilo para decorar mi evento?
+        </h3>
+        <p class="section-eventos__texto">
+          Si vas a tener un evento importante y estás dándole vueltas a la
+          decoración, te vamos a ayudar de una manera muy sencilla. Sólo tienes
+          que ponerte en contacto con nosotros por teléfono o por mail para
+          poder confeccionar tu pedido y lo recibirás en la dirección que nos
+          indiques en la fecha establecida. Este alquiler tiene una duración
+          mínima de 1 día y un máximo de 15 días consecutivos.
+        </p>
+        <p class="section-eventos__texto">
+          Los pedidos deben realizarse con un margen de antelación de mínimo 7 y
+          15 días antes de la fecha en cuestión ya que es necesario gestionar el
+          stock. Para todos los alquileres que incluyan soportes es necesario
+          verificar el stock con el mayor tiempo posible ya que como somos
+          fabricantes en el caso de que sea necesario nos pondríamos manos a la
+          obra con la fabricación.
+        </p>
+        <p class="section-eventos__texto">
+          Para pedidos urgentes ponte en contacto con nosotros por teléfono o en
+          nuestro correo electrónico:
+        </p>
+        <h2 class="section-eventos__subTitulo">
+          ¿Qué hago con los vasitos una vez finalizado el evento?
+        </h2>
+        <p class="section-eventos__texto">
+          Somos conscientes que cuando el evento ha finalizado surge la duda,
+          ¿Qué pasa ahora ? No tienes porque preocuparte. Tanto la entrega como
+          la recogida es parte de nuestro servicio, por lo que no tendrás que
+          encargarte de nada. Tus diseños llegarán con sus soportes y todo los
+          elementos decorativos del pedido bien embalados y protegidos a través
+          de un servicio de GLS. Podrás disfrutar de tus plantitas durante el
+          tiempo que las necesites y una vez haya finalizado el evento, nos
+          pasaremos a recogerlas. Así de sencillo. Sólo debes empaquetarlo tal y
+          como lo has recibido para que no haya problema con el transporte.
+        </p>
+        <h2 class="section-eventos__subTitulo">
+          Precio de alquiler de vasitos decorados
+        </h2>
+        <p class="section-eventos__texto">
+          Una vez el pedido haya sido concretado, se solicitará el pago total
+          del importe del presupuesto, además de un importe en concepto de
+          depósito que será devuelto por parte de Boreen una vez hayamos
+          recepcionado y verificado el estado de las plantas, soportes y demás
+          elementos que compongan el pedido al finalizar el alquiler.
+        </p>
+        <p class="section-eventos__texto">
+          Al finalizar el periodo de alquiler, revisaremos el estado de las
+          plantas tras el alquiler y devolveremos el pago total de la reserva y
+          el depósito, descontando el importe del servicio de alquiler de las
+          plantas.
+        </p>
+      </section>
+    </main>
+    <footer class="footer">
+      <h3 class="footer__texto">Síguenos:</h3>
+      <div class="footer__pie-pagina">
+        <div class="footer__redSocial">
+          <a href="https://www.instagram.com/" target="_blank"
+            ><img
+              class="hover"
+              src="img/1-icons/iconos-footer/instagram-.png"
+              alt="Instagram"
+          /></a>
+          <a href="https://www.facebook.com/" target="_blank"
+            ><img
+              class="hover"
+              src="img/1-icons/iconos-footer/facebook-.png"
+              alt="Facebook"
+          /></a>
+          <a href="#"
+            ><img
+              class="hover"
+              src="img/1-icons/iconos-footer/whatsapp-.png"
+              alt="Facebook"
+          /></a>
+        </div>
+      </div>
+      <div class="avisos">
+        <div class="avisos__copy">
+          <small>&copy;2022 Todos los derechos reservados.</small>
+        </div>
+        <a href="aviso-legal.html" class="avisos__link">Aviso legal</a>
+        <span>&nbsp;|&nbsp;</span>
+        <a href="politica-privacidad.html" class="avisos__link"
+          >Política de privacidad</a
+        >
+        <span>&nbsp;|&nbsp;</span>
+        <a href="politica-cookies.html" class="avisos__link"
+          >Política de cookies</a
+        >
+      </div>
+    </footer>
+  </body>
+</html>

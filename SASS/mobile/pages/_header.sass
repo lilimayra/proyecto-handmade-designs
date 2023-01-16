@@ -1,0 +1,53 @@
+.header
+    position: fixed
+    top: 0
+    left: 0
+    right: 0
+    transition: 1s
+    z-index: 100
+    background: $color__white
+    box-shadow: 0px 0px 15px rgba(0,0,0,.2)
+    &--background
+        background: $color__opacity
+    &__logo
+        width: 6rem
+    &__open
+        width: 2.5rem
+    &__carrito
+        width: 1.8rem
+    &__close
+        width: 1.6rem
+    .container
+        display: flex
+        justify-content: space-between
+        align-items: center
+        padding: 0
+
+    .nav
+        display: grid
+        grid-template-columns: 1fr
+        grid-template-rows: 5rem 1fr
+        position: fixed
+        inset: 0
+        background: $color__white
+        transform: translateX(-100vw)
+        transition: .5s
+        &__ul
+            display: flex
+            flex-direction: column
+            gap: $el__l
+        &__link
+            font-size: 1.5rem
+            font-weight: bold
+            color: $color__green-medium
+        &--show
+            transform: translateX(0)
+        &__container-button
+            display: flex
+            justify-content: flex-end
+            align-items: center
+            padding: $padding__xs
+        &__container-links
+            display: flex
+            justify-content: flex-start
+            align-items: flex-start

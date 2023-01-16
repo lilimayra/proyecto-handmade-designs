@@ -1,0 +1,40 @@
+.header
+    position: fixed
+    top: 0
+    left: 0
+    right: 0
+    transition: 1s
+    z-index: 100
+    background: $color__white
+    box-shadow: 0px 0px 15px rgba(0,0,0,.2)
+    &--background
+        background: $color__opacity
+    &__logo
+        width: 8rem
+    &__open
+        display: none
+    &__carrito
+        display: none
+    &__close
+        display: none
+    .container
+        display: flex
+        justify-content: space-around
+        align-items: center
+    .nav
+        &__ul
+            display: flex
+            gap: $el__xs
+        &__link
+            font-size: $el__xxxs
+            color: $color__black
+            font-weight: bold
+            transition: .5s
+            &:hover
+                color: $color__green-medium
+        &__container-button
+            display: none
+        &__container-links
+            display: flex
+            justify-content: flex-start
+            align-items: flex-start

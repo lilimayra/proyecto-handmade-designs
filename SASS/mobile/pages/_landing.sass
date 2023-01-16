@@ -1,0 +1,71 @@
+.wrap
+    overflow: hidden
+    position: static
+    display: flex
+    flex-direction: column
+    align-items: center
+    height: 30rem
+.bg
+    opacity: 0.6
+    position: fixed
+    left: 0
+    top: 0
+    width: 100vw
+    height: 100vh
+
+.content
+    position: relative
+    max-width: 80%
+    height: 100vh
+    padding: $padding__xs
+    margin: 0 auto
+    &__image
+        width: 80%
+        margin: 0 auto
+
+.links
+    display: flex
+    flex-direction: column
+    align-items: center
+    width: 100%
+    gap: $el__xxs
+    &__btt-perso
+        color: $color__white
+        font-size: $el__xxs
+        font-weight: bold
+        width: 100%
+        padding: $padding__xxs
+        border-radius: $border-radius__xl
+        border: $border__main-color
+        background: $color__green
+        text-decoration: none
+        text-transform: uppercase
+        transition: 0.5s
+        text-align: center
+        &:hover
+            background: $color__green-medium
+
+.redes-sociales
+    position: static
+    bottom: 0
+    width: 100%
+    &__texto
+        color: black
+
+.avisos-landing
+    text-align: center
+    margin-top: $marg__xxs
+    padding-left: $padding__xxs
+    padding-right: $padding__xxs
+    &__copyright
+        color: $color__black
+        font-weight: bold
+    &__links-links
+        color: $color__black
+        font-weight: bold
+        text-decoration: none
+        transition: 0.5s
+        &:hover
+            color: $color__green-medium
+    &__span-span
+        color: black

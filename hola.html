@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <title>Mayra Handmade Designs</title>
+    <link rel="icon" type="image/png" href="favicon/img/favicon.png" />
+    <link rel="apple-touch-icon" href="touch-icon-iphone.png" />
+    <link
+      rel="apple-touch-icon"
+      sizes="152x152"
+      href="/static/img/apple-touch-icon/touch-icon-ipad.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/static/img/apple-touch-icon/touch-icon-iphone-retina.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="167x167"
+      href="/static/img/apple-touch-icon/touch-icon-ipad-retina.png"
+    />
+    <meta name="theme-color" content="#3c790a" />
+    <meta
+      name="theme-color"
+      content="#ecd96f"
+      media="(prefers-color-scheme: light)"
+    />
+    <meta
+      name="theme-color"
+      content="#0b3e05"
+      media="(prefers-color-scheme: dark)"
+    />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no"
+    />
+    <meta name="author" content="Tu nombre" />
+    <meta name="generator" content="Clojure" />
+    <meta name="keywords" content="html, css, javascript" />
+    <meta name="description" content="my description..." />
+    <meta property="og:image" content="img/screenshot.png" />
+    <meta property="og:title" content="The Rock" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@cuenta" />
+    <meta name="twitter:creator" content="@cuenta" />
+    <meta property="og:image:secure_url" content="https://..." />
+    <meta property="og:image:type" content="image/jpeg" />
+    <meta property="og:image:width" content="400" />
+    <meta property="og:image:height" content="300" />
+    <meta property="og:image:alt" content="" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+    />
+    <link rel="stylesheet" type="text/css" href="css/main.css" />
+    <!--Swiper carousel-->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <!-- CSS -->
+    <link
+      href="css/mobile.css"
+      rel="stylesheet"
+      media="all and (max-width: 600px)"
+    />
+    <link
+      href="css/desktop.css"
+      rel="stylesheet"
+      media="all and (min-width: 601px)"
+    />
+    <!-- Fin Css -->
+    <!--JavaScript-->
+    <script src="https://unpkg.com/alpinejs" defer></script>
+    <script defer src="js/main.js"></script>
+    <!-- Fin JavaScript-->
+  </head>
+  <body>
+    <header
+      class="header"
+      x-data="{ open: false, isTopScroll: true }"
+      @scroll.window="isTopScroll = window.pageYOffset === 0"
+      :class="isTopScroll ? '' : 'header--background'">
+      <div class="container">
+        <button class="button header__open" @click="open = true">
+          <img src="img/1-icons/iconos-header/menu.png" alt="Abrir menu" />
+        </button>
+        <a class="header__logo" href="index.html">
+          <img
+            src="img/2-logo/logo-preview.png"
+            alt="Logo"
+            class="header__image header__logo"
+          />
+        </a>
+        <a
+          class="button header__carrito"
+          href="https://www.etsy.com/es/?ref=lgo"
+          target="_blank">
+          <img
+            src="img/1-icons/iconos-header/carrito.png"
+            alt="Carrito de compra"
+          />
+        </a>
+        <nav class="nav" :class="open ? 'nav--show' : ''">
+          <div class="nav__container-button">
+            <button class="button header__close" @click="open = false">
+              <img
+                src="img/1-icons/iconos-header/close.png"
+                alt="Cerrar menu"
+              />
+            </button>
+          </div>
+          <div class="nav__container-links">
+            <ul class="nav__ul">
+              <li class="nav__item">
+                <a href="hola.html" class="nav__link">¡Hola!</a>
+              </li>
+              <li class="nav__item">
+                <a href="vamonos-de-compras.html" class="nav__link"
+                  >¡Vamonos de compras!</a
+                >
+              </li>
+              <li class="nav__item">
+                <a href="lo-que-te-ofrecemos.html" class="nav__link"
+                  >Lo que te ofrecemos</a
+                >
+              </li>
+              <li class="nav__item">
+                <a href="contacto.html" class="nav__link">Contacto</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <main>
+      <!-- Slider main container -->
+      <div class="swiper">
+        <!-- Additional required wrapper -->
+        <div class="swiper-wrapper">
+          <!-- Slides -->
+          <div class="swiper-slide">
+            <img
+              class="swiper-img"
+              src="img/4-hola/img-carrusel/carrusel4.jpg"
+              alt="imagenes aleatorias"
+            />
+          </div>
+          <div class="swiper-slide">
+            <img
+              class="swiper-img"
+              src="img/4-hola/img-carrusel/material.jpg"
+              alt="imagenes aleatorias"
+            />
+          </div>
+          <div class="swiper-slide">
+            <img
+              class="swiper-img"
+              src="img/4-hola/img-carrusel/carrusel1.jpeg"
+              alt="imagenes aleatorias"
+            />
+          </div>
+          <div class="swiper-slide">
+            <img
+              class="swiper-img"
+              src="img/4-hola/img-carrusel/carrusel2.jpg"
+              alt="imagenes aleatorias"
+            />
+          </div>
+          <div class="swiper-slide">
+            <img
+              class="swiper-img"
+              src="img/4-hola/img-carrusel/deco.jpeg"
+              alt="imagenes aleatorias"
+            />
+          </div>
+        </div>
+        <!-- If we need pagination -->
+        <div class="swiper-pagination"></div>
+        <!-- If we need scrollbar -->
+        <div class="swiper-scrollbar"></div>
+      </div>
+      <section>
+        <div class="section-hola">
+          <p>
+            <img
+              class="section-hola__miFoto"
+              src="img/4-hola/yo.png"
+              alt="Mi foto"
+            />
+          </p>
+          <h1 class="section-hola__titulo">¡Hola!</h1>
+          <p class="section-hola__texto">
+            Mayra handmade disings, nace en Valencia, es un hobbie que se ha ido
+            convirtiendo en algo más, le he dedicado mucho cariño y amor a cada
+            uno de los productos, con la idea ir creciendo poco a poco, junto a
+            la convinació por el amor a las plantas he creado unos diseños
+            únicos hechos a mano ideales para cualquier momento.
+          </p>
+          <p>
+            <img
+              class="section-hola__foto-hilo"
+              src="img/4-hola/hilo.jpg"
+              alt="Material de trabajo"
+            />
+          </p>
+          <h3 class="section-hola__subTitulo">Toda Creación Necesita “Alma”</h3>
+          <p class="section-hola__texto">
+            Nuestros diseños son ideales para regalar, para tu hogar incluso
+            para decorar cualquier evento. Todos nuestros productos están hechos
+            a mano, uno por uno, y damos a cada pieza la importancia que se
+            merece. Re-utilizamos los botes de cristal Para adaptar cada modelo,
+            con la convinación de esquejes cortadas de mi propia colección de
+            Pothos son el complemento ideal y único para ti.
+          </p>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <h3 class="footer__texto">Síguenos en:</h3>
+      <div class="footer__pie-pagina">
+        <div class="footer__redSocial">
+          <a href="https://www.instagram.com/" target="_blank"
+            ><img
+              class="hover"
+              src="img/1-icons/iconos-footer/instagram-.png"
+              alt="Instagram"
+          /></a>
+          <a href="https://www.facebook.com/" target="_blank"
+            ><img
+              class="hover"
+              src="img/1-icons/iconos-footer/facebook-.png"
+              alt="Facebook"
+          /></a>
+          <a href="#"
+            ><img
+              class="hover"
+              src="img/1-icons/iconos-footer/whatsapp-.png"
+              alt="Facebook"
+          /></a>
+        </div>
+      </div>
+      <div class="avisos">
+        <div class="avisos__white">
+          <small>&copy;2022 Todos los derechos reservados.</small>
+        </div>
+        <a href="aviso-legal.html" class="avisos__link">Aviso legal</a>
+        <span>&nbsp;|&nbsp;</span>
+        <a href="politica-privacidad.html" class="avisos__link"
+          >Política de privacidad</a
+        >
+        <span>&nbsp;|&nbsp;</span>
+        <a href="politica-cookies.html" class="avisos__link"
+          >Política de cookies</a
+        >
+      </div>
+    </footer>
+  </body>
+</html>
